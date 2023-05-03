@@ -1,3 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: orange;
+  background: #333;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* stops screen scrolling when arrow keys are pressed */
+}
+
+.game-container {
+  position: relative;
+  width: 352px;
+  height: 198px;
+  margin: 0 auto;
+  outline: 1px solid #fff;
+
+  transform: scale(2) translateY(50%); /* increase size 3-fold, but from middle, translate moves image down */
+}
+
+.game-container canvas {
+  image-rendering: pixelated; /* keeps pixel images crisp when zoomed */
 }
