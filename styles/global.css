@@ -1,3 +1,13 @@
+:root {
+  --border-color: #291D4D;
+  --dialog-background: #FFF3B4;
+
+  --menu-background: #FFE8D2;
+  --menu-border-color: #A48456;
+  --menu-font-color: #3A160D;
+  --menu-selected-background: #7FC2FF;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,7 +26,7 @@ body {
   margin: 0 auto;
   outline: 1px solid #fff;
 
-  transform: scale(2) translateY(50%); /* increase size 3-fold, but from middle, translate moves image down */
+  transform: scale(3) translateY(50%); /* increase size 3-fold, but from middle, translate moves image down */
 }
 
 .game-container canvas {
