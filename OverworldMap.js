@@ -169,7 +169,6 @@ window.OverworldMaps = {
           ]
         }
       ],
-
     }
   },
   Kitchen: {
@@ -198,6 +197,15 @@ window.OverworldMaps = {
           }
         ] 
       })
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,10)] : [
+        {
+          events: [
+            { type: "changeMap", map: 'DemoRoom' },
+          ]
+        }
+      ],
     }
   }
 };
