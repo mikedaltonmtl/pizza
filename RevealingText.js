@@ -14,8 +14,8 @@ class RevealingText {
 
     if (list.length > 0) {
       this.timeout = setTimeout(() => {
-        this.revealOneCharacter(list);
-      }, next.delayAfter);
+        this.revealOneCharacter(list)
+      }, next.delayAfter)
     } else {
       this.isDone = true;
     }
@@ -26,26 +26,27 @@ class RevealingText {
     this.isDone = true;
     this.element.querySelectorAll("span").forEach(s => {
       s.classList.add("revealed");
-    });
+    })
   }
 
   init() {
     let characters = [];
     this.text.split("").forEach(character => {
 
-      // Create each span, add element to DOM
+      //Create each span, add to element in DOM
       let span = document.createElement("span");
       span.textContent = character;
       this.element.appendChild(span);
 
-      // Add this span to our internal state array
+      //Add this span to our internal state Array
       characters.push({
         span,
-        delayAfter: character === " " ? 0 : this.speed
+        delayAfter: character === " " ? 0 : this.speed         
       })
-    });
+    })
 
     this.revealOneCharacter(characters);
+
   }
 
 }

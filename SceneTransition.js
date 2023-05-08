@@ -20,6 +20,7 @@ class SceneTransition {
 
     this.element.addEventListener("animationend", () => {
       callback();
-    }, { once: true });
+    }, { once: true })
+
   }
 }

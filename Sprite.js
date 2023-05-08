@@ -1,50 +1,48 @@
 class Sprite {
   constructor(config) {
 
-    // Set up the image
+    //Set up the image
     this.image = new Image();
     this.image.src = config.src;
     this.image.onload = () => {
       this.isLoaded = true;
     }
 
-    // Shadow
+    //Shadow
     this.shadow = new Image();
-    this.useShadow = true; //config.useShadow || false;
+    this.useShadow = true; //config.useShadow || false
     if (this.useShadow) {
-      this.shadow.src = './images/characters/shadow.png';
+      this.shadow.src = "/images/characters/shadow.png";
     }
     this.shadow.onload = () => {
       this.isShadowLoaded = true;
     }
 
-
-    // Configure Animation & Initial State
+    //Configure Animation & Initial State
     this.animations = config.animations || {
-      'idle-down'   : [ [0,0] ],
-      'idle-right'  : [ [0,1] ],
-      'idle-up'     : [ [0,2] ],
-      'idle-left'   : [ [0,3] ],
-      'walk-down'   : [ [1,0], [0,0], [3,0], [0,0] ],
-      'walk-right'  : [ [1,1], [0,1], [3,1], [0,1] ],
-      'walk-up'     : [ [1,2], [0,2], [3,2], [0,2] ],
-      'walk-left'   : [ [1,3], [0,3], [3,3], [0,3] ]
+      "idle-down" : [ [0,0] ],
+      "idle-right": [ [0,1] ],
+      "idle-up"   : [ [0,2] ],
+      "idle-left" : [ [0,3] ],
+      "walk-down" : [ [1,0],[0,0],[3,0],[0,0], ],
+      "walk-right": [ [1,1],[0,1],[3,1],[0,1], ],
+      "walk-up"   : [ [1,2],[0,2],[3,2],[0,2], ],
+      "walk-left" : [ [1,3],[0,3],[3,3],[0,3], ]
     }
-    this.currentAnimation = 'idle-right'; //config.currentAnimation || 'idle-down';
+    this.currentAnimation = "idle-right"; // config.currentAnimation || "idle-down";
     this.currentAnimationFrame = 0;
 
-    // animation speed (cadence)
-    this.animationFrameLimit = config.animationFrameLimit || 4 ;
+    this.animationFrameLimit = config.animationFrameLimit || 8;
     this.animationFrameProgress = this.animationFrameLimit;
+    
 
-    // Reference the game object
+    //Reference the game object
     this.gameObject = config.gameObject;
   }
 
-  // return the current frame of the animation
   get frame() {
-    return this.animations[this.currentAnimation][this.currentAnimationFrame];
-  };
+    return this.animations[this.currentAnimation][this.currentAnimationFrame]
+  }
 
   setAnimation(key) {
     if (this.currentAnimation !== key) {
@@ -55,21 +53,23 @@ class Sprite {
   }
 
   updateAnimationProgress() {
-    // Downtick frame progress
+    //Downtick frame progress
     if (this.animationFrameProgress > 0) {
       this.animationFrameProgress -= 1;
       return;
     }
 
-    // Reset the counter
+    //Reset the counter
     this.animationFrameProgress = this.animationFrameLimit;
     this.currentAnimationFrame += 1;
-    // Go back to the beginning of the array once you get to the end
+
     if (this.frame === undefined) {
-      this.currentAnimationFrame = 0;
+      this.currentAnimationFrame = 0
     }
 
+
   }
+  
 
   draw(ctx, cameraPerson) {
     const x = this.gameObject.x - 8 + utils.withGrid(10.5) - cameraPerson.x;
@@ -81,10 +81,10 @@ class Sprite {
     const [frameX, frameY] = this.frame;
 
     this.isLoaded && ctx.drawImage(this.image,
-      frameX * 32, frameY * 32,  // starting point (left, top crops)
-      32,32,// width & height of cut (sprite size)
-      x,y,  // co-ordinates on screen
-      32,32 // size to draw csprite on map
+      frameX * 32, frameY * 32,
+      32,32,
+      x,y,
+      32,32
     )
 
     this.updateAnimationProgress();
