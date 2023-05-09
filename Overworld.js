@@ -65,7 +65,7 @@ class Overworld {
  }
 
  init() {
-  this.startMap(window.OverworldMaps.DemoRoom);
+  this.startMap(window.OverworldMaps.Kitchen);
 
   this.bindActionInput();
   this.bindHeroPositionCheck();
@@ -76,10 +76,22 @@ class Overworld {
   this.startGameLoop();
 
   this.map.startCutscene([
-    { type: "changeMap", map: "Kitchen"},
-    // { who: "hero", type: "walk",  direction: "down" },
-    // { type: "textMessage", text: "This is the very first message!"},
+    { who: "hero", type: "stand",  direction: "right", time: 500 },
+    { who: "hero", type: "walk",  direction: "right" },
+    { who: "hero", type: "walk",  direction: "right" },
+    { who: "hero", type: "walk",  direction: "right" },
+    { who: "hero", type: "walk",  direction: "right" },
+    { who: "hero", type: "walk",  direction: "right" },
+    { who: "hero", type: "walk",  direction: "right" },
+    { who: "hero", type: "walk",  direction: "right" },
+    { who: "hero", type: "walk",  direction: "right" },
+    { type: "textMessage", text: "You: Hey Andy, have you seen Frank anywhere?"},
+    { who: "andy", type: "stand",  direction: "left" },
+    { type: "textMessage", text: "Andy: No, he's probably sleeping out back. He said he was dying to have a lie-down after last night's party!"},
+    { type: "textMessage", text: "You: Party? No-one invited me. Hmmmmmm..."},
+    { who: "andy", type: "stand",  direction: "down" },
+    { type: "textMessage", text: "Go over to Frank's body and hit ENTER when you're next to him."},
   ])
-
  }
+
 }

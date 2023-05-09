@@ -139,18 +139,6 @@ window.OverworldMaps = {
         //   { type: "walk",  direction: "down" },
         // ]
       }),
-      npcD: new Person({
-        x: utils.withGrid(2),
-        y: utils.withGrid(6),
-        src: "/images/characters/people/deadErio.png",
-        // behaviorLoop: [
-        //   { type: "walk",  direction: "left" },
-        //   { type: "stand",  direction: "up", time: 800 },
-        //   { type: "walk",  direction: "up" },
-        //   { type: "walk",  direction: "right" },
-        //   { type: "walk",  direction: "down" },
-        // ]
-      }),
     },
     walls: {
       [utils.asGridCoord(7,6)] : true,
@@ -180,25 +168,29 @@ window.OverworldMaps = {
         }
       ]
     }
-    
   },
   Kitchen: {
     lowerSrc: "/images/maps/KitchenLower.png",
     upperSrc: "/images/maps/KitchenUpper.png",
     gameObjects: {
+      erio: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/deadErio.png",
+      }),
       hero: new Person({
         isPlayerControlled: true,
         x: utils.withGrid(1),
         y: utils.withGrid(8),
       }),
-      npcB: new Person({
+      andy: new Person({
         x: utils.withGrid(10),
         y: utils.withGrid(8),
         src: "/images/characters/people/npc3.png",
         talking: [
           {
             events: [
-              { type: "textMessage", text: "You made it! This video is going to be such a good time!", faceHero:"npcB" },
+              { type: "textMessage", text: "You made it! This video is going to be such a good time!", faceHero:"andy" },
             ]
           }
         ]
