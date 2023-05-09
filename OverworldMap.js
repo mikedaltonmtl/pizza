@@ -165,6 +165,7 @@ window.OverworldMaps = {
             { who: "npcB", type: "walk",  direction: "left" },
             { who: "npcB", type: "stand",  direction: "up", time: 500 },
             { type: "textMessage", text:"You can't be in there!"},
+            { type: "textMessage", text:"Out you come!"},
             { who: "npcB", type: "walk",  direction: "right" },
             { who: "hero", type: "walk",  direction: "down" },
             { who: "hero", type: "walk",  direction: "left" },
@@ -187,8 +188,8 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(5),
+        x: utils.withGrid(1),
+        y: utils.withGrid(8),
       }),
       npcB: new Person({
         x: utils.withGrid(10),
@@ -202,6 +203,42 @@ window.OverworldMaps = {
           }
         ]
       })
-    }
+    },
+    walls: {
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(1,5)] : true,
+      [utils.asGridCoord(1,6)] : true,
+      [utils.asGridCoord(1,7)] : true,
+      [utils.asGridCoord(1,9)] : true,
+      [utils.asGridCoord(2,4)] : true,
+      [utils.asGridCoord(2,9)] : true,
+      [utils.asGridCoord(3,4)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(5,4)] : true,
+      [utils.asGridCoord(6,4)] : true,
+      [utils.asGridCoord(6,7)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,4)] : true,
+      [utils.asGridCoord(7,7)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,4)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,4)] : true,
+      [utils.asGridCoord(9,7)] : true,
+      [utils.asGridCoord(9,9)] : true,
+      [utils.asGridCoord(10,4)] : true,
+      [utils.asGridCoord(10,7)] : true,
+      [utils.asGridCoord(10,9)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,10)] : true,
+      [utils.asGridCoord(12,5)] : true,
+      [utils.asGridCoord(12,10)] : true,
+      [utils.asGridCoord(13,6)] : true,
+      [utils.asGridCoord(13,7)] : true,
+      [utils.asGridCoord(13,8)] : true,
+      [utils.asGridCoord(13,9)] : true,
+    },
   },
 }
