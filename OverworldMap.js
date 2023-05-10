@@ -484,7 +484,7 @@ window.OverworldMaps = {
               { type: "textMessage", text: "Doris: And telling Betty he'll take her waterskiing when he knows my boat is faster. What a back-stabber!" },
               { type: "textMessage", text: "Doris: Well, I tell you, I'm goonna stab him in the back when I next see him." },
               { type: "textMessage", text: "You: Maybe you already did? Perhaps I should have mentioned it already, but he's been murdered." },
-              { type: "textMessage", text: "Doris: Who Frank? Nooooooo, beautiful Frank, the love of my life. I miss him already. You didn't find the concert tickets on him by any chance? It would be a shame to waste them, maybe we could go together?" },
+              { type: "textMessage", text: "Doris: Who Frank? Nooooooo, beautiful Frank, the love of my life. I miss him already. Are you any good at driving a boat? I need a partner to waterski with? What about Nickelback, are you a fan? We could make it a date?" },
               { type: "textMessage", text: "You: Sorry, I have to work. Here, have a mint, it might take the edge off." },
               { type: "textMessage", text: "Doris: No thanks, I'm allergic." },
               { who: "hero", type: "walk",  direction: "left" },
