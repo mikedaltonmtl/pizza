@@ -479,8 +479,9 @@ window.OverworldMaps = {
             events: [
               { type: "textMessage", text: "You: Hey Doris, I heard you were pretty angry with Frank last night?", faceHero:"doris"  },
               { type: "textMessage", text: "Doris: I don't want to talk about it." },
-              { type: "textMessage", text: "Doris: I mean, what a slime-ball; buying Ed Sheeran tickets with my hard-earned dough and then offering to take Betty to the concert." },
-              { type: "textMessage", text: "Doris: And telling her he'll take her waterskiing when he knows my boat is faster. What a back-stabber!" },
+              { type: "textMessage", text: "Doris: I mean, what a slime-ball; buying tickets for that terrible crooner Sheeran, with my hard-earned dough and then offering to take Betty to the concert." },
+              { type: "textMessage", text: "Doris: What a waste! His music's terrible and Nickelback are playing here next week." },
+              { type: "textMessage", text: "Doris: And telling Betty he'll take her waterskiing when he knows my boat is faster. What a back-stabber!" },
               { type: "textMessage", text: "Doris: Well, I tell you, I'm goonna stab him in the back when I next see him." },
               { type: "textMessage", text: "You: Maybe you already did? Perhaps I should have mentioned it already, but he's been murdered." },
               { type: "textMessage", text: "Doris: Who Frank? Nooooooo, beautiful Frank, the love of my life. I miss him already. You didn't find the concert tickets on him by any chance? It would be a shame to waste them, maybe we could go together?" },
