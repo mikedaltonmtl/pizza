@@ -90,7 +90,7 @@ class Overworld {
     { type: "textMessage", text: "Andy: No, he's probably sleeping out back. He said he was dying to have a lie-down after last night's party!"},
     { type: "textMessage", text: "You: Party? No-one invited me. Hmmmmmm..."},
     { who: "andy", type: "stand",  direction: "down" },
-    { type: "textMessage", text: "Go over to Frank's body (he's the one lying in a pool of.... oh, you know who he is, you're a detective!) and hit ENTER."},
+    { type: "textMessage", text: "Help: Go over to Frank's body (he's the one lying in a pool of.... oh, you know who he is, you're a detective!) and hit ENTER."},
   ])
  }
 
