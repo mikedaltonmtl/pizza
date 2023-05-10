@@ -359,6 +359,24 @@ window.OverworldMaps = {
       [utils.asGridCoord(13,11)] : true,
     },
     cutsceneSpaces: {
+      [utils.asGridCoord(4,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "up" },
+            { type: "textMessage", text: "Betty: Have you seen Frank around? I'm gonna murder that scoundrel if he doesn't give me my Ed Sheeran tickets in time for tonight's gig!", faceHero:"betty" },
+            { type: "textMessage", text: "You: Murder? Hmmmm, interesting... Acutally I have some bad news for you, Frank has pasta-way." },
+            { who: "betty", type: "walk",  direction: "left" },
+            { who: "betty", type: "walk",  direction: "left" },
+            { who: "betty", type: "stand",  direction: "up", time: 500 },
+            { who: "betty", type: "walk",  direction: "right" },
+            { who: "betty", type: "walk",  direction: "right" },
+            { type: "textMessage", text: "Betty: Oh no, that terrible news, we were supposed to go waterskiing together on my boat later today.", faceHero:"betty" },
+            { type: "textMessage", text: "You: Oh, you have a boat? Here, have a mint, it will cheer you up." },
+            { type: "textMessage", text: "Betty: That's OK thanks, I have a pack of my own... oh, where are they now? I seem to have lost them." },
+            { type: "textMessage", text: "Betty: You should talk to Clive, he was really angry with Frank at the party last night." },
+          ]
+        }
+      ],
       [utils.asGridCoord(6,12)]: [
         {
           events: [
