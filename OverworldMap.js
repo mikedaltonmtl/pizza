@@ -576,9 +576,139 @@ window.OverworldMaps = {
         {
           events: [
             { type: "textMessage", text: "This is end of the game, did you figure it out? Of course you did! I hope you enjoyed playing :D" },
+            { type: "changeMap", map: "Street" }
           ]
         }
       ]
     }
   },
+  Street: {
+    lowerSrc: "/images/maps/StreetNorthLower.png",
+    upperSrc: "/images/maps/StreetNorthUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(7),
+        y: utils.withGrid(6),
+      }),
+      andy: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(15),
+        src: "/images/characters/people/npc3.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "left", time: 800 },
+          { type: "stand",  direction: "up", time: 800 },
+          { type: "stand",  direction: "right", time: 1200 },
+          { type: "stand",  direction: "up", time: 300 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Andy: The game's over, stop playing! I couldn't think of anything else to code, nothing to see here, please be on your way.", faceHero: "andy" },
+            ]
+          }
+        ]
+      }),
+      betty: new Person({
+        x: utils.withGrid(2),
+        y: utils.withGrid(12),
+        src: "/images/characters/people/npc1.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "down", time: 800 },
+          { type: "stand",  direction: "left", time: 800 },
+          { type: "stand",  direction: "right", time: 800 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Betty: I didn't do it, go check for fingerprints!", faceHero: "betty" },
+            ]
+          }
+        ]
+      }),
+      clive: new Person({
+        x: utils.withGrid(10),
+        y: utils.withGrid(8),
+        src: "/images/characters/people/npc2.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "down", time: 800 },
+          { type: "stand",  direction: "right", time: 800 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Clive: It wasn't me, Frank was a buddy. It was Betty, I saw her!", faceHero: "clive" },
+            ]
+          }
+        ]
+      }),
+      doris: new Person({
+        x: utils.withGrid(13),
+        y: utils.withGrid(11),
+        src: "/images/characters/people/npc4.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "down", time: 300 },
+          { type: "stand",  direction: "left", time: 800 },
+          { type: "stand",  direction: "up", time: 500 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Doris: I think it was Betty, or Clive, maybe Andy, perhaps you!", faceHero: "doris" },
+            ]
+          }
+        ]
+      }),
+    },
+    walls: {
+      [utils.asGridCoord(1,8)] : true,
+      [utils.asGridCoord(1,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(1,11)] : true,
+      [utils.asGridCoord(1,12)] : true,
+      [utils.asGridCoord(1,13)] : true,
+      [utils.asGridCoord(1,14)] : true,
+      [utils.asGridCoord(2,7)] : true,
+      [utils.asGridCoord(2,15)] : true,
+      [utils.asGridCoord(3,6)] : true,
+      [utils.asGridCoord(3,7)] : true,
+      [utils.asGridCoord(3,15)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,15)] : true,
+      [utils.asGridCoord(5,5)] : true,
+      [utils.asGridCoord(5,15)] : true,
+      [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(6,15)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(7,8)] : true,
+      [utils.asGridCoord(7,9)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(8,8)] : true,
+      [utils.asGridCoord(8,9)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(8,15)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(9,15)] : true,
+      [utils.asGridCoord(10,5)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(10,15)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,15)] : true,
+      [utils.asGridCoord(12,6)] : true,
+      [utils.asGridCoord(12,15)] : true,
+      [utils.asGridCoord(13,6)] : true,
+      [utils.asGridCoord(13,15)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(14,8)] : true,
+      [utils.asGridCoord(14,9)] : true,
+      [utils.asGridCoord(14,10)] : true,
+      [utils.asGridCoord(14,11)] : true,
+      [utils.asGridCoord(14,12)] : true,
+      [utils.asGridCoord(14,13)] : true,
+      [utils.asGridCoord(14,14)] : true,
+
+    },
+  }
 }
