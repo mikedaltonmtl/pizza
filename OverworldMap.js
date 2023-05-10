@@ -177,6 +177,15 @@ window.OverworldMaps = {
         x: utils.withGrid(9),
         y: utils.withGrid(5),
         src: "/images/characters/people/deadErio.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Frank? Frank? Oh no! I'd better find out who did this." },
+              { type: "textMessage", text: "What's this on the floor?" },
+              { type: "textMessage", text: "What's this on the floor?" },
+            ]
+          }
+        ]
       }),
       hero: new Person({
         isPlayerControlled: true,
@@ -232,5 +241,27 @@ window.OverworldMaps = {
       [utils.asGridCoord(13,8)] : true,
       [utils.asGridCoord(13,9)] : true,
     },
+    cutsceneSpaces: {
+      [utils.asGridCoord(7,4)]: [
+        {
+          events: [
+            { who: "npcB", type: "walk",  direction: "left" },
+            { who: "npcB", type: "stand",  direction: "up", time: 500 },
+            { type: "textMessage", text:"You can't be in there!"},
+            { type: "textMessage", text:"Out you come!"},
+            { who: "npcB", type: "walk",  direction: "right" },
+            { who: "hero", type: "walk",  direction: "down" },
+            { who: "hero", type: "walk",  direction: "left" },
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            { type: "changeMap", map: "DemoRoom" }
+          ]
+        }
+      ]
+    }
   },
 }
