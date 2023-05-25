@@ -190,6 +190,7 @@ window.OverworldMaps = {
               { who: "andy", type: "walk",  direction: "right" },
               { who: "andy", type: "stand",  direction: "down" },
               { type: "textMessage", text: "You: I'm going to prove it wasn't me by finding out who did this!" },
+              { who: "hero", type: "stand",  direction: "up" },
               { type: "textMessage", text: "You: Oh look, that's strange: the knife in Frank's back isn't a kitchen knife, it's a boating knife??? I wonder if I can find any more clues? ..." },
               { type: "textMessage", text: "You: ... and what's this on the floor? A VIP Ed Sheeran ticket for tomorrow night's show.... I wonder why the murderer didn't take it?" },
               { type: "textMessage", text: "You: ... and there's an open box of mints lying here, don't mind if I do! Mmmmmmm." },
