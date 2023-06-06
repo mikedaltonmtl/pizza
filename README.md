@@ -46,4 +46,3 @@ If you'd like to install this project locally, follow these steps:
 - Type `node express.js` to run the development server.
 
 - Open the page <http://localhost:8000> in your browser and enjoy!
-
