@@ -21,5 +21,8 @@ have told me that they had fun playing the game - so it's all good!!
 
 The end product looked like this:
 
+![Game Action](./images/mystery.gif)
+
 
 If you'd like to follow the tutorial yourself, you can find it here: https://www.youtube.com/watch?v=fyi4vfbKEeo&amp;list=PLcjhmZ8oLT0r9dSiIK6RB_PuBWlG1KSq_&amp;index=1&amp;t=104s
+
