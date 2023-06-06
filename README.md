@@ -26,3 +26,21 @@ The end product looked like this:
 
 If you'd like to follow the tutorial yourself, you can find it here: https://www.youtube.com/watch?v=fyi4vfbKEeo&amp;list=PLcjhmZ8oLT0r9dSiIK6RB_PuBWlG1KSq_&amp;index=1&amp;t=104s
 
+## Tech Stack
+
+[![Javascript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+[![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://whatwg.org/)
+[![CSS](https://img.shields.io/badge/-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/Overview.en.html)
+[![Express](https://img.shields.io/badge/Express-black?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en)
+
+## Setup
+
+- Clone the project from the GitHub repository <https://github.com/mikedaltonmtl/pizza/>.
+
+- Install dependencies with `npm install`.
+
+- Type `> node express.js` to run the development server.
+
+- Open the page <http://localhost:8000> in your browser and enjoy!
+
