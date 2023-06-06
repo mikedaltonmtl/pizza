@@ -2,7 +2,8 @@
 
 td;dr You can play the game here: https://pizza-mystery.netlify.app
 
-Use the 'arrow keys' to move your character around the screen and hit 'return' to talk to the other people.
+Use the `arrow keys` to move your character around the screen and hit `return` to talk to the other people and move on to the next bit of dialogue.
+If the text is revealing too slowly for your liking (we're all on a schedule here!), you can also hit `return` to have it print all at once.
 
 It should look something like this:
 
